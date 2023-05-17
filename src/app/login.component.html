@@ -1,0 +1,18 @@
+<p>different types of bindings in angular</p>
+<app-checkout [name1]="binny"></app-checkout>
+<app-confirm (changeto)="changethevalue($event)"></app-confirm>
+<h4 [class]="colorchange">count is {{ cou }}</h4>
+<app-auth [(count)]="counting"></app-auth>
+<h4> count is {{counting}} </h4>
+<h4 style="font-size:20px;">example of class binding</h4>
+<div>
+<h4 class="style" [class.highlight]="simple" >this world is beautiful</h4>
+<input type="button" value="press here" (click)="simple=!simple">
+
+</div>
+<br>
+<h4>style binding examples</h4>
+<div>
+  <!-- if i put "isvalid ? yellow:blue " is gonna wrong.beacause inside " " it gonna look for any variables name in ts file of this html.so if we want to write any string inside "" itself,use single quotes. -->
+  <button [style.color]=" isvalid ? 'yellow':'blue'" (click)="isvalid=!isvalid">hello </button>
+</div>

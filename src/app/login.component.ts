@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -9,6 +10,7 @@ export class LoginComponent implements OnInit {
 
   simple=false;
   isvalid=false;
+  op="modalbackground1";
   constructor() { }
 
   ngOnInit() {
@@ -36,10 +38,13 @@ export class LoginComponent implements OnInit {
 
  }
 
-
-
-
-
-
-
+ openmodal(){
+   this.op="modalbackground";
+ }
+ closemodal(){
+   this.op="modalbackground1";
+ }
+ submitvalue(n:NgForm){
+   console.log(n.value);
+ }
 }

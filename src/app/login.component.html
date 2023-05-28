@@ -1,4 +1,16 @@
 <p>different types of bindings in angular</p>
+<button (click)="openmodal()">modal</button>
+<div [class]="op">
+  <div class="modal">
+    <h5>hi how r u?</h5>
+    <form #formi="ngForm" (ngSubmit)="submitvalue(formi)">
+      <input type="text" name="name" ngModel>
+      <input type="submit" name="submit">
+    </form>
+    <button (click)="closemodal()">close</button>
+    </div>
+</div>
+
 <app-checkout [name1]="binny"></app-checkout>
 <app-confirm (changeto)="changethevalue($event)"></app-confirm>
 <h4 [class]="colorchange">count is {{ cou }}</h4>
